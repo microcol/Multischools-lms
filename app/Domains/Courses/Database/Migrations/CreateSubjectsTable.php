@@ -14,6 +14,7 @@ class CreateSubjectsTable extends Migration
     {
         // Matérias
         $this->schema->create('subjects', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
 

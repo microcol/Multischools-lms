@@ -13,6 +13,7 @@ class CreateFilesTable extends Migration
     public function up()
     {
         $this->schema->create('files', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
             $table->string('fileable_id', 36)->nullable()->index();

@@ -14,6 +14,7 @@ class CreateCoursesTable extends Migration
     {
         // Cursos
         $this->schema->create('courses', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
 

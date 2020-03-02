@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         $this->schema->create('users', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->bigIncrements('id');
             $table->unsignedBigInteger('parent1_id')->nullable()->index();
             $table->unsignedBigInteger('parent2_id')->nullable()->index();

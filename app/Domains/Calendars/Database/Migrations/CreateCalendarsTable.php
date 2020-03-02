@@ -14,6 +14,7 @@ class CreateCalendarsTable extends Migration
     {
         // Calendário
         $this->schema->create('calendars', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
 

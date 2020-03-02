@@ -14,6 +14,7 @@ class CreateQuestionsTable extends Migration
     {
         // Questões das provas
         $this->schema->create('questions', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->bigIncrements('id');
             // tenant_id apenas um facilitador, não precisa desse campo
             $table->unsignedInteger('tenant_id')->index();

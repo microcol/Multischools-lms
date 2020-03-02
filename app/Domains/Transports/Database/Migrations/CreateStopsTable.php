@@ -13,6 +13,7 @@ class CreateStopsTable extends Migration
     public function up()
     {
         $this->schema->create('stops', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
 

@@ -14,6 +14,7 @@ class CreateSkillsTable extends Migration
     {
         // Habilidades dos professores
         $this->schema->create('skills', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             // tenant_id apenas um facilitador, não precisa desse campo
             $table->unsignedInteger('tenant_id')->index();

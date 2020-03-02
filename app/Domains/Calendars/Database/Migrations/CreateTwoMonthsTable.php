@@ -16,6 +16,7 @@ class CreateTwoMonthsTable extends Migration
     {
         // Dias letivos
         $this->schema->create('two_months', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->integer('id')->unique();
             $table->date('start1');
             $table->date('end1');

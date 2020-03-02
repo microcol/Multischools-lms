@@ -14,6 +14,7 @@ class CreateSchedulesTable extends Migration
     {
         // Horários
         $this->schema->create('schedules', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->uuid('id')->primary();
 
             // tenant_id apenas um facilitador, não precisa desse campo

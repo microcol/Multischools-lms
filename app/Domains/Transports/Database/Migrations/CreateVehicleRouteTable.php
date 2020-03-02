@@ -13,6 +13,7 @@ class CreateVehicleRouteTable extends Migration
     public function up()
     {
         $this->schema->create('vehicle_route', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->unsignedInteger('route_id')->index();
             $table->unsignedInteger('vehicle_id')->index();
 

@@ -13,6 +13,7 @@ class CreateVehiclesTable extends Migration
     public function up()
     {
         $this->schema->create('vehicles', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id')->index();
             $table->unsignedInteger('tenant_id')->index();
 

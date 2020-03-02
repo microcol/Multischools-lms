@@ -15,6 +15,7 @@ class CreateSchoolDaysTable extends Migration
     {
         // Dias letivos
         $this->schema->create('school_days', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
 
             $table->date('date')->unique();

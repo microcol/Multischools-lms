@@ -15,6 +15,7 @@ class CreateFrequenciesTable extends Migration
         // Frequências
         // Uma por horário
         $this->schema->create('frequencies', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->uuid('id')->index();
             // tenant_id apenas um facilitador, não precisa desse campo
             $table->unsignedInteger('tenant_id')->index();

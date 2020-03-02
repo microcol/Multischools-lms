@@ -13,6 +13,7 @@ class CreateTenantsUsersTable extends Migration
     public function up()
     {
         $this->schema->create('tenants_users', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->unsignedInteger('tenant_id')->index();
             $table->unsignedBigInteger('user_id')->index();
             $table->boolean('student')->default(false);

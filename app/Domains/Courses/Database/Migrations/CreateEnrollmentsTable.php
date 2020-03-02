@@ -14,6 +14,7 @@ class CreateEnrollmentsTable extends Migration
     {
         // Matrículas
         $this->schema->create('enrollments', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->bigIncrements('id');
 
             // tenant_id apenas um facilitador, não precisa desse campo

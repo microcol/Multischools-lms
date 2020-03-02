@@ -14,6 +14,7 @@ class CreateEventsTable extends Migration
     {
         // Eventos
         $this->schema->create('events', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('tenant_id')->index();
 

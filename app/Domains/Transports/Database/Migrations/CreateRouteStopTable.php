@@ -13,6 +13,7 @@ class CreateRouteStopTable extends Migration
     public function up()
     {
         $this->schema->create('route_stop', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->unsignedInteger('route_id')->index();
             $table->unsignedInteger('stop_id')->index();
 

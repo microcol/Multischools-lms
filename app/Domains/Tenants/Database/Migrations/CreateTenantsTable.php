@@ -14,6 +14,7 @@ class CreateTenantsTable extends Migration
     public function up()
     {
         $this->schema->create('tenants', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->increments('id');
             $table->unsignedInteger('director_id')->nullable()->index();
 
