@@ -73,7 +73,7 @@ services:
       - MYSQL_PASSWORD=emtudo
 
   cache:
-    image: redis:4.0
+    image: redis:5.0
     container_name: emtudo-school-redis
     command: --appendonly yes
     volumes:
